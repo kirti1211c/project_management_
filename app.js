@@ -193,7 +193,7 @@ app.get('/welcome', (req, res) => {
     let { username } = req.query;
     console.log(username)
     Proj.find({}).then(pdata => {
-        console.log(pdata[0]["title"])
+//         console.log(pdata[0]["title"])
         User.find({ username: username }).then(data => {
             console.log(data[0]["position"])
             let tdata = [data[0], pdata]
