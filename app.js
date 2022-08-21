@@ -6,7 +6,7 @@ const { v4: uuid } = require('uuid');
 
 app.use(express.static('public'));
 
-mongoose.connect('mongodb://localhost:27017/projects3', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017/projects3', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("connected to mongoose");
     })
