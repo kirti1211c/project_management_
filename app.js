@@ -238,11 +238,11 @@ app.get('/userr', (req, res) => {
 })
 
 const port = process.env.PORT || 8080
-connectDB().then(() => {
+// connectDB().then(() => {
     app.listen(port, () => {
         console.log("Listening!");
     })
-}
+// }
 
 
 // Proj.find({}).then(data => {
